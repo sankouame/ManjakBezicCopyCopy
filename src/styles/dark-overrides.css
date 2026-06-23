@@ -1,0 +1,121 @@
+/**
+ * Surcharges thème — Bëzic Manjakù
+ *
+ * ── MODE CLAIR : fond crème #FEEECD ─────────────────────────────────────────
+ * Les éléments bg-white restent blancs (cards sur crème = contraste parfait).
+ * Les gris neutres sont réchauffés pour s'harmoniser avec la palette crème.
+ *
+ * ── MODE SOMBRE : fond noir #111111 ─────────────────────────────────────────
+ * Toutes les classes bg-white/gray/* deviennent anthracite.
+ * Toutes les classes text-gray-* restent lisibles (blanc doux).
+ */
+
+/* ════════════════════════════════════════════════════════════════════════════
+   MODE CLAIR — harmonisation palette crème
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* Fonds gris neutres → réchauffés */
+:root .bg-gray-50,
+:root .bg-slate-50   { background-color: #FBF2E0 !important; }
+:root .bg-gray-100,
+:root .bg-slate-100  { background-color: #F0DDB8 !important; }
+:root .bg-gray-200   { background-color: #E8D0A0 !important; }
+
+/* Input bg en mode clair → blanc pour contraste sur crème */
+:root input:not([type="checkbox"]):not([type="radio"]),
+:root textarea,
+:root select {
+  background-color: #FFFFFF !important;
+  color: #1A1A1A !important;
+  border-color: rgba(30, 77, 58, 0.15) !important;
+}
+:root input::placeholder,
+:root textarea::placeholder { color: #A08C7C !important; }
+
+/* Textes gris → charbon chaud */
+:root .text-gray-900 { color: #1A1A1A !important; }
+:root .text-gray-800 { color: #2D1F14 !important; }
+:root .text-gray-700 { color: #3D2B1F !important; }
+:root .text-gray-600 { color: #6B5040 !important; }
+:root .text-gray-500 { color: #8A7060 !important; }
+:root .text-gray-400 { color: #A08C7C !important; }
+
+/* Bordures gris → teintées vert */
+:root .border-gray-100 { border-color: rgba(30,77,58,0.10) !important; }
+:root .border-gray-200 { border-color: rgba(30,77,58,0.14) !important; }
+:root .border-gray-300 { border-color: rgba(30,77,58,0.18) !important; }
+:root .divide-gray-100 > * + * { border-color: rgba(30,77,58,0.10) !important; }
+:root .divide-gray-200 > * + * { border-color: rgba(30,77,58,0.14) !important; }
+
+/* Fond crème des items de notification non-lus */
+:root .bg-primary\/5 { background-color: rgba(30,77,58,0.06) !important; }
+
+/* ════════════════════════════════════════════════════════════════════════════
+   MODE SOMBRE — fond noir anthracite
+   ════════════════════════════════════════════════════════════════════════════ */
+
+/* ── Fonds ────────────────────────────────────────────────────────────────── */
+.dark .bg-white        { background-color: #1C1C1E !important; }
+.dark .bg-white\/95    { background-color: rgba(28,28,30,0.97) !important; }
+.dark .bg-white\/90    { background-color: rgba(28,28,30,0.95) !important; }
+.dark .bg-white\/80    { background-color: rgba(28,28,30,0.90) !important; }
+.dark .bg-background   { background-color: #111111 !important; }
+.dark .bg-gray-50      { background-color: #1C1C1E !important; }
+.dark .bg-gray-100     { background-color: #2C2C2E !important; }
+.dark .bg-gray-200     { background-color: #3A3A3C !important; }
+.dark .bg-slate-50     { background-color: #1C1C1E !important; }
+.dark .bg-slate-100    { background-color: #2C2C2E !important; }
+.dark .bg-secondary    { background-color: #2C2C2E !important; }
+.dark .bg-muted        { background-color: #2C2C2E !important; }
+.dark .bg-red-50       { background-color: rgba(255,69,58,0.10) !important; }
+.dark .bg-red-100      { background-color: rgba(255,69,58,0.15) !important; }
+.dark .bg-primary\/5   { background-color: rgba(91,175,132,0.08) !important; }
+
+/* ── Textes ───────────────────────────────────────────────────────────────── */
+.dark .text-foreground   { color: #F2F2F2 !important; }
+.dark .text-black        { color: #F2F2F2 !important; }
+.dark .text-gray-900     { color: #F2F2F2 !important; }
+.dark .text-gray-800     { color: #EBEBEB !important; }
+.dark .text-gray-700     { color: #D8D8D8 !important; }
+.dark .text-gray-600     { color: #ABABAB !important; }
+.dark .text-gray-500     { color: #8E8E93 !important; }
+.dark .text-gray-400     { color: #636366 !important; }
+.dark .text-muted-foreground { color: #8E8E93 !important; }
+
+/* ── Bordures ─────────────────────────────────────────────────────────────── */
+.dark .border-border   { border-color: rgba(255,255,255,0.08) !important; }
+.dark .border-gray-50  { border-color: rgba(255,255,255,0.05) !important; }
+.dark .border-gray-100 { border-color: rgba(255,255,255,0.07) !important; }
+.dark .border-gray-200 { border-color: rgba(255,255,255,0.09) !important; }
+.dark .border-gray-300 { border-color: rgba(255,255,255,0.12) !important; }
+.dark .divide-border    > * + * { border-color: rgba(255,255,255,0.08) !important; }
+.dark .divide-gray-100  > * + * { border-color: rgba(255,255,255,0.07) !important; }
+.dark .divide-gray-200  > * + * { border-color: rgba(255,255,255,0.09) !important; }
+
+/* ── Inputs ───────────────────────────────────────────────────────────────── */
+.dark input:not([type="checkbox"]):not([type="radio"]),
+.dark textarea,
+.dark select {
+  background-color: #2C2C2E !important;
+  color: #F2F2F2 !important;
+  border-color: rgba(255,255,255,0.08) !important;
+}
+.dark input::placeholder,
+.dark textarea::placeholder { color: #636366 !important; }
+
+/* ── Ombres ───────────────────────────────────────────────────────────────── */
+.dark .shadow-sm { box-shadow: 0 1px 3px rgba(0,0,0,0.5)  !important; }
+.dark .shadow    { box-shadow: 0 2px 8px rgba(0,0,0,0.5)  !important; }
+.dark .shadow-md { box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important; }
+.dark .shadow-lg { box-shadow: 0 8px 24px rgba(0,0,0,0.6) !important; }
+.dark .shadow-xl { box-shadow: 0 12px 32px rgba(0,0,0,0.6) !important; }
+
+/* ── Hover states ─────────────────────────────────────────────────────────── */
+.dark .hover\:bg-muted\/50:hover { background-color: rgba(44,44,46,0.6) !important; }
+.dark .hover\:bg-muted:hover     { background-color: #2C2C2E !important; }
+.dark .hover\:bg-gray-50:hover   { background-color: #2C2C2E !important; }
+
+/* ── Fond global ──────────────────────────────────────────────────────────── */
+.dark body,
+.dark #root,
+.dark #root > div { background-color: #111111 !important; }
