@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router";
 import { motion } from "motion/react";
-import { Button } from "../components/ui/button";
 import { MessageCircle } from "lucide-react";
 
 export function Onboarding1() {
@@ -15,15 +14,22 @@ export function Onboarding1() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-sm"
         >
-          <div className="w-32 h-32 mx-auto mb-8 rounded-3xl bg-gradient-to-br from-primary to-accent flex items-center justify-center shadow-lg">
-            <MessageCircle className="w-16 h-16 text-white" />
+          <div
+            className="w-32 h-32 mx-auto mb-8 rounded-3xl flex items-center justify-center"
+            style={{
+              background: "linear-gradient(135deg, #1E4D3A, #C96A3D)",
+              boxShadow: "0 8px 32px rgba(30,77,58,0.3)",
+            }}
+          >
+            <MessageCircle className="w-16 h-16" style={{ color: "#FFFFFF" }} />
           </div>
 
           <motion.h2
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-3xl font-bold text-center text-foreground mb-4"
+            className="text-3xl text-center mb-4"
+            style={{ fontWeight: 700, color: "#1A1A1A" }}
           >
             Échangez ensemble
           </motion.h2>
@@ -32,7 +38,8 @@ export function Onboarding1() {
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="text-center text-muted-foreground text-lg leading-relaxed"
+            className="text-center text-lg leading-relaxed"
+            style={{ color: "#8A7060" }}
           >
             Rejoignez des discussions chaleureuses et connectez-vous avec la communauté manjak partout dans le monde.
           </motion.p>
@@ -42,25 +49,26 @@ export function Onboarding1() {
       {/* Navigation */}
       <div className="px-6 pb-8">
         <div className="flex gap-2 justify-center mb-6">
-          <div className="w-8 h-1 rounded-full bg-primary" />
+          <div className="w-8 h-1 rounded-full" style={{ background: "#1E4D3A" }} />
           <div className="w-8 h-1 rounded-full" style={{ background: "#EDD9A4" }} />
           <div className="w-8 h-1 rounded-full" style={{ background: "#EDD9A4" }} />
         </div>
 
         <div className="flex gap-3">
-          <Button
-            variant="outline"
-            className="flex-1 h-12 rounded-2xl"
+          <button
             onClick={() => navigate("/login")}
+            className="flex-1 h-12 rounded-2xl flex items-center justify-center text-sm font-medium transition-colors"
+            style={{ border: "1.5px solid rgba(30,77,58,0.3)", background: "transparent", color: "#1E4D3A" }}
           >
             Passer
-          </Button>
-          <Button
-            className="flex-1 h-12 rounded-2xl bg-primary text-primary-foreground"
+          </button>
+          <button
             onClick={() => navigate("/onboarding-2")}
+            className="flex-1 h-12 rounded-2xl flex items-center justify-center text-sm font-medium transition-colors"
+            style={{ background: "#1E4D3A", color: "#FFFFFF" }}
           >
             Suivant
-          </Button>
+          </button>
         </div>
       </div>
     </div>
