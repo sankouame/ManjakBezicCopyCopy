@@ -5,25 +5,27 @@ import { ThemeProvider } from "./context/ThemeContext";
 export default function App() {
   return (
     <ThemeProvider>
+      {/* Gray desktop frame */}
       <div
         style={{
           position: "fixed",
           inset: 0,
-          background: "#C8C8C8",
+          background: "#B0B0B0",
           display: "flex",
-          alignItems: "stretch",
           justifyContent: "center",
-          overflow: "hidden",
+          alignItems: "flex-start",
         }}
       >
+        {/* Phone container — 390px wide, full viewport height */}
         <div
           style={{
             width: "100%",
             maxWidth: "390px",
-            height: "100%",
+            height: "100dvh",
             position: "relative",
-            overflow: "hidden",
-            boxShadow: "0 0 60px rgba(0,0,0,0.25)",
+            overflowX: "hidden",
+            overflowY: "visible",
+            boxShadow: "0 0 40px rgba(0,0,0,0.3)",
           }}
         >
           <RouterProvider router={router} />
